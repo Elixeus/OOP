@@ -1,6 +1,6 @@
 public class selectionSort{
     private int[] array;
-    private boolean defaultFlag = false; // provide default value to the inSort method
+    // public static final boolean defaultFlag = false; // provide default value to the inSort method
     public selectionSort(int[] array){
         this.array = array;  // constructor
     }
@@ -30,24 +30,25 @@ public class selectionSort{
     }
     public void seSort(){
         // overload the inSort() method, setting the 'default' sort order to asc
-        seSort(defaultFlag);
+        // seSort(defaultFlag);
+        seSort(false);
     }
     
-    public void seSortReverse(){
-        int minIndex;
-        for(int i=0; i<this.array.length-1; i++){
-            minIndex = i;
-            for(int j=i+1;j<this.array.length; j++){
-                if(this.array[j] > this.array[minIndex]){
-                    minIndex = j;
-                }
-            }
-            // swap the values
-            int temp = this.array[i];
-            this.array[i] = this.array[minIndex];
-            this.array[minIndex] = temp;
-        }
-    }
+    // public void seSortReverse(){
+    //     int minIndex;
+    //     for(int i=0; i<this.array.length-1; i++){
+    //         minIndex = i;
+    //         for(int j=i+1;j<this.array.length; j++){
+    //             if(this.array[j] > this.array[minIndex]){
+    //                 minIndex = j;
+    //             }
+    //         }
+    //         // swap the values
+    //         int temp = this.array[i];
+    //         this.array[i] = this.array[minIndex];
+    //         this.array[minIndex] = temp;
+    //     }
+    // }
     // public static void swap(int[] array, int index1, int index2){
     //     int temp = array[index1];
     //     array[index1] = array[index2];
@@ -71,17 +72,18 @@ public class selectionSort{
         System.out.print("\n");
         reverse = true;
         // call the seSort() with a reverse value
-        x.seSort(true);
+        x.seSort(reverse);
         for (int i: x.array){
             System.out.print(i+", ");
         }
         System.out.print("\n");
         reverse = false;
         // test method overloading
-        x.seSort(false);
+        x.seSort(reverse);
         for (int i: x.array){
             System.out.print(i+", ");
         }
+        System.out.print("\n");
         
     }
 }
