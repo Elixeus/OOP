@@ -1,3 +1,4 @@
+// this code is still messy
 public class InnerClass {
     public static final int LENGTH = 10;
     private int[] array = new int[LENGTH];
@@ -10,17 +11,19 @@ public class InnerClass {
     }
 
     public void switchElement(){
-        class Element{
-            private String sign;
-            public Element(int eleInt){
-                this.sign = Integer.toString(eleInt);
-            }
-        }
         for (int j=0; j<array.length; j++){
-            (String) array[j] = new Element(j).sign;
+            array[j] = new Element(j).sign;
         }
         System.out.println(InnerClass.array);
         System.out.println("work completed");
+    }
+
+    class Element{
+        private int sign;
+        public Element(int eleInt){
+        // this.sign = Integer.toString(eleInt);
+            this.sign = eleInt;
+        }
     }
 
     public static void main(String[] args){
