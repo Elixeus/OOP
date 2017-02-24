@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+
 class SortObj(object):
+
     def __init__(self, data):
         self.data = data
+
     def selection_sort(self, reverse=False):
         '''This is a python implementation of the selection sort algorithm
         It can sort the data of the object in either ascending or descending
@@ -19,14 +23,15 @@ class SortObj(object):
             for j in range(ind + 1, len(self.data)):
                 compare = self.data[j] <= self.data[targetind]
                 # use the reverse marker to check the sort order
-                if not reverse: #  ascending order
+                if not reverse:  # ascending order
                     if compare:
                         targetind = j
-                else:           #  descending order
+                else:  # descending order
                     if not compare:
                         targetind = j
             # swap the values
-            self.data[targetind], self.data[ind] = self.data[ind], self.data[targetind]
+            self.data[targetind], self.data[
+                ind] = self.data[ind], self.data[targetind]
 
 
 def main():
@@ -46,7 +51,7 @@ def main():
 #         for j in sorted(range(ind - 1, len(self.data) - 1), reverse=True):
 #             if self.data[j] > self.data[targetind]:
 #                 targetind = j
-#         self.data[targetind], self.data[ind] = self.data[ind], self.data[targetind]
+#         self.data[targetind], self.data[ind] = self.data[ind],self.data[targetind]
 
 if __name__ == '__main__':
     main()
