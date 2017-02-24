@@ -51,7 +51,8 @@ def main():
 #         for j in sorted(range(ind - 1, len(self.data) - 1), reverse=True):
 #             if self.data[j] > self.data[targetind]:
 #                 targetind = j
-#         self.data[targetind], self.data[ind] = self.data[ind],self.data[targetind]
+#         self.data[targetind], self.data[ind] = /
+#         self.data[ind],self.data[targetind]
 
 if __name__ == '__main__':
     main()
