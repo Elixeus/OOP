@@ -1,3 +1,4 @@
+// this code is still messy
 public class InnerClass {
     public static final int LENGTH = 10;
     private int[] array = new int[LENGTH];
