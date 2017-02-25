@@ -23,12 +23,14 @@ class SortObj(object):
             for j in range(ind + 1, len(self.data)):
                 compare = self.data[j] <= self.data[targetind]
                 # use the reverse marker to check the sort order
-                if not reverse:  # ascending order
-                    if compare:
-                        targetind = j
-                else:  # descending order
-                    if not compare:
-                        targetind = j
+                # if not reverse:  # ascending order
+                #     if compare:
+                #         targetind = j
+                # else:  # descending order
+                #     if not compare:
+                #         targetind = j
+                if (compare if not reverse else not compare):
+                    targetind = j
             # swap the values
             self.data[targetind], self.data[
                 ind] = self.data[ind], self.data[targetind]
