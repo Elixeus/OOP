@@ -10,7 +10,8 @@ import java.util.regex.Pattern;
 
 /** 
  * An implementation of the MTG interface that uses a list of lists.
- * @author UC San Diego Intermediate Programming MOOC team 
+ * @author UC San Diego Intermediate Programming MOOC team
+ * @author Xia's own implementation
  */
 public class MarkovTextGeneratorLoL implements MarkovTextGenerator {
 
